@@ -3,6 +3,7 @@ kind: Deployment
 
 metadata: 
   name: coffee-shop
+  namespace: mamu
 spec: 
   replicas: 2
 
@@ -20,10 +21,15 @@ spec:
         - name: nginx
           image: nginx:1.27
           ports:
-           -containerPort: 80 
+           - containerPort: 80 
           env:
-            course: "DevSecOps with aws"
-            trainer: "sivakumar reddy"
-            Duration: "120Hrs"
+            - name: COURSE
+              value: "DevSecOps with aws"
+
+            - name: TRAINER
+              value: "sivakumar reddy"
+
+            - name: DURATION
+              value: "120Hrs"  
 
 
