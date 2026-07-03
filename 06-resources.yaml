@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: roboshop-dev
+  namespace: mamu 
+spec:
+  replicas: 3
+
+  selector:
+    matchLabels:
+      app: roboshop-dev 
+  template:
+    metadata: 
+      labels:
+       app: roboshop-dev 
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:1.27
+          ports:
+            - containerPort: 80
+          env: 
+            - name: STUDENT_NAME
+              value: "Ameen" 
+            - name: BATCH   
+              value: "joindevops-86s"
+            - name: SUBJECT
+              value: "kubernetes" 
+            - name: TRAINER 
+              value: "sivakumar Reddy"   
+
+          resources:
+              requests:
+                cpu: "100m"   
+                memory: "128Mi"
+              limits: 
+                cpu: "200m" 
+                memory: "256Mi"
+
