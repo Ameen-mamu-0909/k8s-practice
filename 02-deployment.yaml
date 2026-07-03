@@ -1,9 +1,9 @@
-apiVersion: v1
+apiVersion: apps/v1
 kind: Deployment
 
 metadate: 
 name: nginx 
-namespace: mamu
+
 
 spec:
   replicas: 3
