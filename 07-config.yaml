@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: configMap 
+
+metadata:
+  name: cafe-config
+  namespace: mamu 
+
+data:
+   SHOP_NAME: "CAFE_BREW" 
+   OWNER_NAME: "LINGAYA" 
+   LOCATION: "HYDERBAD"
+   ITEM: "ICE CREAM"
+   PRICE: "19"  
