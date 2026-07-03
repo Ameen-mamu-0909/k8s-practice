@@ -3,6 +3,7 @@ kind: Deployment
 
 metadate: 
 name: nginx 
+namespace: mamu
 
 spec:
   replicas: 3
